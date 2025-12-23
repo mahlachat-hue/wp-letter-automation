@@ -1,0 +1,71 @@
+{
+  "name": "mahlachat-hue/wp-letter-automation",
+  "description": "A WordPress plugin for automated letter generation and management using Advanced Custom Fields (ACF) Pro.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Mahlachat Hue",
+      "email": "info@mahlachat-hue.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "composer/installers": "^2.2",
+    "wordpress/wordpress-core": ">=5.0",
+    "wpackagist-plugin/advanced-custom-fields-pro": "^6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5 || ^10.0",
+    "phpstan/phpstan": "^1.10",
+    "phpstan/phpstan-strict-rules": "^1.5",
+    "squizlabs/php_codesniffer": "^3.7",
+    "wp-coding-standards/wpcs": "^3.0",
+    "sirbrillig/phpcs-variable-analysis": "^2.11",
+    "php-parallel-lint/php-parallel-lint": "^1.3",
+    "php-parallel-lint/php-console-highlighter": "^1.0",
+    "phpcompat/php-compatibility": "^9.3",
+    "phpunit/php-invoker": "^3.0 || ^4.0",
+    "psalm/plugin-wordpress": "^0.18.1",
+    "vimeo/psalm": "^5.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MahlachatHue\\LetterAutomation\\": "src/"
+    },
+    "files": [
+      "includes/functions.php"
+    ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "scripts": {
+    "phpstan": "phpstan analyse --ansi --memory-limit=512M",
+    "phpcs": "phpcs --standard=WordPress-Core --extensions=php --ignore=node_modules,vendor,*.min.js,*.min.css",
+    "phpcs-fix": "phpcbf --standard=WordPress-Core --extensions=php --ignore=node_modules,vendor,*.min.js,*.min.css",
+    "lint": "parallel-lint --exclude vendor --exclude node_modules .",
+    "psalm": "psalm --no-cache",
+    "test": "phpunit",
+    "test-coverage": "phpunit --coverage-html ./coverage",
+    "quality": [
+      "@lint",
+      "@phpcs",
+      "@phpstan",
+      "@psalm",
+      "@test"
+    ]
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "optimize-autoloader": true,
+    "sort-packages": true
+  }
+}
