@@ -1,0 +1,95 @@
+# WordPress Core
+/wp-admin/
+/wp-includes/
+/wp-content/plugins/
+/wp-content/themes/
+/wp-*.php
+/xmlrpc.php
+/wp-app.php
+/wp-atom.php
+/wp-commentsrss2.php
+/wp-config.php
+/wp-links-opml.php
+/wp-load.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/index.php
+/license.txt
+/readme.html
+
+# WordPress specific files
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+
+# WordPress Config
+wp-config-local.php
+wp-config-*.php
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+# Composer
+vendor/
+composer.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/
+*.code-workspace
+
+# Build and Distribution
+dist/
+build/
+*.min.js
+*.min.css
+
+# Testing
+/tests/
+.phpunit.xml
+.phpunit.xml.dist
+coverage/
+
+# Local development
+local/
+*.local.php
+config.local.php
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# OS and system files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
